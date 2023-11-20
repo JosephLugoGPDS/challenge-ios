@@ -12,6 +12,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   })  : _login = login,
         super(const AuthInitialState()) {
     on<GetLoginEvent>(_onLoginEvent);
+    on<AuthCheckEvent>(_onAuthCheckEvent);
   }
   final LoginUseCase _login;
 
@@ -24,4 +25,13 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     );
   }
 
+  void _onAuthCheckEvent(AuthCheckEvent event, Emitter<AuthState> emit) async {
+    if (state is AuthSuccessState) {
+      final user = (state as AuthSuccessState).user;
+      emit(const AuthLoadingState());
+      emit(AuthSuccessState(user: user));
+    } else {
+      emit(const AuthFailureState(errorMessage: 'Not logged in'));
+    }
+  }
 }

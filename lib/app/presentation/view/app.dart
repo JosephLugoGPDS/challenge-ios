@@ -1,4 +1,3 @@
-
 import 'package:challenge/app/presentation/routes/app_router.dart';
 import 'package:challenge/app/presentation/theme/app_theme.dart';
 import 'package:challenge/core/utils/generics/screen_util.dart';

@@ -1,10 +1,9 @@
-
-
 import 'package:flutter/cupertino.dart';
 
 abstract class AppTheme {
   //* Colors
   static const Color primaryColor = Color(0xffFF8960);
+  static const Color secondaryColor = Color(0xffFF62A5);
   static const Color whiteColor = Color(0xffFFFFFF);
   static const Color accentColor = Color(0xffF05522);
   static const Color grayColor = Color(0xffDAD9E2);

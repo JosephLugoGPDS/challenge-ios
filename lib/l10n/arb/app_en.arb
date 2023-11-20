@@ -38,5 +38,25 @@
   "search": "Search",
   "@search": {
     "description": "The label for the search feature"
-  }
+  },
+  "user": "Usuario",
+  "@user": {
+    "description": "El nombre de usuario"
+  },
+  "password": "Contraseña",
+  "@password": {
+    "description": "La contraseña del usuario"
+  },
+  "requiredField": "Estos campos es requerido",
+  "@requiredField": {
+    "description": "El mensaje de error para campos requeridos"
+  },
+  "checkCredentials": "Por favor, revisa tus credenciales",
+  "@checkCredentials": {
+    "description": "El mensaje de error para credenciales incorrectas"
+  },
+  "login": "Ingresar",
+  "@login": {
+    "login": "The button label for login"
+}
 }
