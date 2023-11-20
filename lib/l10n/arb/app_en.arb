@@ -1,0 +1,42 @@
+{
+  "app": "Tech Streaming Challenge",
+  "@app": {
+    "description": "The conventional name App"
+  },
+  "videos": "Videos",
+  "@videos": {
+    "description": "The label for the videos section"
+  },
+  "popular": "Popular",
+  "@popular": {
+    "description": "The label for the popular videos section"
+  },
+  "trending": "Trending",
+  "@trending": {
+    "description": "The label for the trending videos section"
+  },
+  "recommended": "Recommended",
+  "@recommended": {
+    "description": "The label for the recommended videos section"
+  },
+  "watchLater": "Watch Later",
+  "@watchLater": {
+    "description": "The label for the watch later videos section"
+  },
+  "liked": "Liked",
+  "@liked": {
+    "description": "The label for the liked videos section"
+  },
+  "subscriptions": "Subscriptions",
+  "@subscriptions": {
+    "description": "The label for the subscriptions videos section"
+  },
+  "categories": "Categories",
+  "@categories": {
+    "description": "The label for the categories section"
+  },
+  "search": "Search",
+  "@search": {
+    "description": "The label for the search feature"
+  }
+}
