@@ -1,4 +1,5 @@
 {
+  "locale": "en-US",
   "app": "Tech Streaming Challenge",
   "@app": {
     "description": "The conventional name App"
