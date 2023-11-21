@@ -2,7 +2,6 @@ import 'package:challenge/app/presentation/env/env.dart';
 import 'package:challenge/app/presentation/theme/app_theme.dart';
 import 'package:challenge/core/utils/extensions/screen_extension.dart';
 import 'package:challenge/features/home/presentation/widgets/poster_widget.dart';
-import 'package:challenge/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 
 class MovieDetailScreen extends StatelessWidget {
@@ -22,7 +21,6 @@ class MovieDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final AppLocalizations l10n = context.l10n;
     return Scaffold(
       backgroundColor: AppTheme.blackColor,
       body: CustomScrollView(
