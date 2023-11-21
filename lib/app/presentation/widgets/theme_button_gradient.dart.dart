@@ -19,6 +19,7 @@ class ThemeButtonGradient extends StatelessWidget {
     this.boxShadow,
     this.height,
     this.styleTextButton,
+    this.leading,
   }) : super(key: key);
   final String title;
   final void Function()? onPressed;
@@ -34,6 +35,7 @@ class ThemeButtonGradient extends StatelessWidget {
   final List<BoxShadow>? boxShadow;
   final double? height;
   final TextStyle? styleTextButton;
+  final Widget? leading;
 
   @override
   Widget build(BuildContext context) {
@@ -74,16 +76,22 @@ class ThemeButtonGradient extends StatelessWidget {
         onPressed: onPressed,
         child: Padding(
           padding: padding ?? EdgeInsets.fromLTRB(10.w, 10.h, 10.w, 10.h),
-          child: Text(
-            title,
-            textAlign: TextAlign.center,
-            maxLines: 1,
-            style: styleTextButton ??
-                TextStyle(
-                  color: textColor ?? AppTheme.blackColor,
-                  fontSize: 16.sp,
-                  fontWeight: FontWeight.w600,
-                ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              if (leading != null) leading!,
+              Text(
+                title,
+                textAlign: TextAlign.center,
+                maxLines: 1,
+                style: styleTextButton ??
+                    TextStyle(
+                      color: textColor ?? AppTheme.blackColor,
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.w700,
+                    ),
+              ),
+            ],
           ),
         ),
       ),

@@ -59,6 +59,8 @@
     "login": "Ingresar",
     "@login": {
       "login": "The button label for login"
-  }
+  },
+  "play": "Reproducir",
+  "popularMovies": "Películas populares"
   }
   

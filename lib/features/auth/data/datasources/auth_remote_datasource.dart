@@ -1,4 +1,4 @@
-import 'package:challenge/app/data/success_response_model.dart';
+import 'package:challenge/app/data/models/success_response_model.dart';
 import 'package:challenge/app/presentation/env/env.dart';
 import 'package:challenge/features/auth/data/model/user_model.dart';
 

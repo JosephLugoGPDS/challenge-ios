@@ -59,5 +59,7 @@
   "login": "Ingresar",
   "@login": {
     "login": "The button label for login"
-}
+},
+"play": "Play",
+"popularMovies": "Popular Movies"
 }
