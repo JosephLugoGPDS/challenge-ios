@@ -37,42 +37,39 @@ class MovieItemSearch extends StatelessWidget {
             }),
         child: Row(
           children: [
-            Hero(
-              tag: 'poster',
-              child: CachedNetworkImage(
-                imageUrl: imageUrl,
-                imageBuilder: (context, imageProvider) => Container(
-                  margin: EdgeInsets.only(right: 8.w, left: 8.w),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8.w),
-                    image: DecorationImage(
-                      image: imageProvider,
-                      fit: BoxFit.cover,
-                      colorFilter: const ColorFilter.mode(
-                          AppTheme.primaryColor, BlendMode.colorBurn),
-                    ),
-                  ),
-                  width: 200.w,
-                  height: 120.h,
-                ),
-                placeholder: (context, url) => const Center(
-                  child: CircularProgressIndicator(
-                    color: AppTheme.primaryColor,
+            CachedNetworkImage(
+              imageUrl: imageUrl,
+              imageBuilder: (context, imageProvider) => Container(
+                margin: EdgeInsets.only(right: 8.w, left: 8.w),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.w),
+                  image: DecorationImage(
+                    image: imageProvider,
+                    fit: BoxFit.cover,
+                    colorFilter: const ColorFilter.mode(
+                        AppTheme.primaryColor, BlendMode.colorBurn),
                   ),
                 ),
-                fit: BoxFit.cover,
-                errorWidget: (context, url, error) => SizedBox(
-                  width: 200.w,
-                  height: 120.h,
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      SizedBox(height: 8.h),
-                      const Icon(Icons.error),
-                      SizedBox(height: 8.h),
-                      Expanded(child: SvgPicture.asset(Assets.svg.brand)),
-                    ],
-                  ),
+                width: 200.w,
+                height: 120.h,
+              ),
+              placeholder: (context, url) => const Center(
+                child: CircularProgressIndicator(
+                  color: AppTheme.primaryColor,
+                ),
+              ),
+              fit: BoxFit.cover,
+              errorWidget: (context, url, error) => SizedBox(
+                width: 200.w,
+                height: 120.h,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    SizedBox(height: 8.h),
+                    const Icon(Icons.error),
+                    SizedBox(height: 8.h),
+                    Expanded(child: SvgPicture.asset(Assets.svg.brand)),
+                  ],
                 ),
               ),
             ),

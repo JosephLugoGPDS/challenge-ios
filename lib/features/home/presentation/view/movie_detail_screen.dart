@@ -47,10 +47,7 @@ class MovieDetailScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Hero(
-                    tag: 'poster',
-                    child: PosterWidget(imageUrl: '${Env.baseImage}$imageUrl'),
-                  ),
+                  PosterWidget(imageUrl: '${Env.baseImage}$imageUrl'),
                   SizedBox(height: 8.h),
                   Padding(
                     padding:
