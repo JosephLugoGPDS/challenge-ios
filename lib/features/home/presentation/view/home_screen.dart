@@ -1,7 +1,8 @@
 import 'package:challenge/app/presentation/env/env.dart';
+import 'package:challenge/app/presentation/routes/app_router.dart';
 import 'package:challenge/app/presentation/theme/app_theme.dart';
 import 'package:challenge/core/utils/extensions/screen_extension.dart';
-import 'package:challenge/features/home/presentation/bloc/bloc/get_movies_bloc.dart';
+import 'package:challenge/features/home/presentation/bloc/movies/get_movies_bloc.dart';
 import 'package:challenge/features/home/presentation/widgets/image_user.dart';
 import 'package:challenge/features/home/presentation/widgets/movie_item.dart';
 import 'package:challenge/features/home/presentation/widgets/poster_widget.dart';
@@ -53,8 +54,12 @@ class HomeView extends StatelessWidget {
               elevation: 0,
               actions: [
                 IconButton(
-                  onPressed: () {},
-                  icon: Icon(Icons.search, size: 30.sp),
+                  onPressed: () => Navigator.pushNamed(
+                      context, AppRoutes.searchMoviesScreen),
+                  icon: Hero(
+                    tag: 'search_icon',
+                    child: Icon(Icons.search, size: 30.sp),
+                  ),
                 ),
                 IconButton(
                   onPressed: () {},
@@ -103,9 +108,12 @@ class HomeView extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          PosterWidget(
-                              imageUrl:
-                                  '${Env.baseImage}${stateGetMoviesState.movies.last.posterPath}'),
+                          Hero(
+                            tag: 'back_icon',
+                            child: PosterWidget(
+                                imageUrl:
+                                    '${Env.baseImage}${stateGetMoviesState.movies.last.posterPath}'),
+                          ),
                           SizedBox(height: 8.h),
                           Padding(
                             padding: EdgeInsets.only(left: 8.0.w),

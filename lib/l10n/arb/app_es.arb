@@ -61,6 +61,7 @@
       "login": "The button label for login"
   },
   "play": "Reproducir",
-  "popularMovies": "Películas populares"
+  "popularMovies": "Películas populares",
+  "searchMovie": "Buscar película"
   }
   

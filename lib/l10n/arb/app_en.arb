@@ -61,5 +61,6 @@
     "login": "The button label for login"
 },
 "play": "Play",
-"popularMovies": "Popular Movies"
+"popularMovies": "Popular Movies",
+"searchMovie": "Search Movie"
 }

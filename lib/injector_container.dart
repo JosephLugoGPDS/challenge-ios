@@ -8,7 +8,9 @@ import 'package:challenge/features/home/data/datasource/movies_remote_datasource
 import 'package:challenge/features/home/data/repositories/movies_repository_impl.dart';
 import 'package:challenge/features/home/domain/repositories/movies_repository.dart';
 import 'package:challenge/features/home/domain/use_cases/get_movies_upcoming_use_case.dart';
-import 'package:challenge/features/home/presentation/bloc/bloc/get_movies_bloc.dart';
+import 'package:challenge/features/home/domain/use_cases/search_movies_use_case.dart';
+import 'package:challenge/features/home/presentation/bloc/movies/get_movies_bloc.dart';
+import 'package:challenge/features/home/presentation/bloc/search/search_movies_bloc.dart';
 import 'package:get_it/get_it.dart';
 
 final sl = GetIt.instance;
@@ -33,6 +35,10 @@ Future<void> featHome() async {
       () => GetMoviesUpcomingUseCase(repository: sl()));
   sl.registerFactory<GetMoviesBloc>(
       () => GetMoviesBloc(getMoviesUpcoming: sl()));
+  sl.registerFactory<SearchMoviesBloc>(
+      () => SearchMoviesBloc(searchMoviesUpcoming: sl()));
+  sl.registerLazySingleton<SearchMoviesUseCase>(
+      () => SearchMoviesUseCase(repository: sl()));
 }
 
 Future<void> initApiClient() async {

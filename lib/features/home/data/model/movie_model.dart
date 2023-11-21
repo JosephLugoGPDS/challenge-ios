@@ -11,10 +11,10 @@ class MovieModel extends Movie {
   @JsonKey(
     name: 'poster_path',
   )
-  final String posterPath;
+  final String? posterPath;
   @override
   @JsonKey(name: 'backdrop_path')
-  final String backdropPath;
+  final String? backdropPath;
   @override
   @JsonKey(name: 'genre_ids')
   final List<int> genreIds;

@@ -1,6 +1,7 @@
 import 'package:challenge/app/data/datasources/api_client.dart';
 import 'package:challenge/app/data/models/success_response_model.dart';
 import 'package:challenge/features/home/data/model/movie_model.dart';
+import 'package:flutter/material.dart';
 
 abstract class MoviesRemoteDataSource {
   Future<SuccessResponseModel> getMoviesFromNetwork(String locale, int page);
@@ -49,6 +50,7 @@ class MoviesRemoteDataSourceImpl implements MoviesRemoteDataSource {
           'query': query,
         },
       );
+      debugPrint('response: ${response.data}');
       if (response.statusCode != 200) {
         return const SuccessResponseModel(
             success: false, message: "Get movies failed");
@@ -58,8 +60,7 @@ class MoviesRemoteDataSourceImpl implements MoviesRemoteDataSource {
             success: true, message: 'Movies Success', responseObj: movies);
       }
     } catch (e) {
-      return const SuccessResponseModel(
-          success: false, message: "Get movies failed");
+      return SuccessResponseModel(success: false, message: e.toString());
     }
   }
 }
